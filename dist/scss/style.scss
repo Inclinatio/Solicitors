@@ -1,0 +1,38 @@
+@import "custom-variables";
+@import "fonts";
+@import "reset";
+@import "default-clases";
+@import "layout";
+
+.inner{
+	@extend %vertical-align;
+	height: calc( 100vh - 80px );
+	background: url("../img/inner-bg.jpg") no-repeat top center;
+	background-size: cover;
+	text-align: center;
+}
+.inner-form{
+	width: 850px;
+	height: 125px;
+	background-color: rgba( 0, 0, 0, 0.5 );
+	padding: 25px 37px 43px 37px;
+	.first-form{
+		.form-control{
+			height: 57px;
+			width: 325px;
+			border-radius: 2px;
+			color: #7e878d;
+			padding: 22px 17px;
+		}
+		.form-btn{
+			height: 57px;
+			width: 115px;
+			background-color: $generalOrange;
+			color: #fff;
+			border-radius: 2px;
+		}
+		input{
+			margin-right: 1px;
+		}
+	}
+}

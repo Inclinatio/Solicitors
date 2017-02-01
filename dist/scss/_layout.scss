@@ -1,0 +1,47 @@
+@import "custom-variables";
+
+.container{
+	width: $desktopContainerWidth;
+	padding: 0 10px;
+	margin: 0 auto;
+}
+
+.header{
+	height: $desktopHeaderHeight;
+	width: 100%;
+	background: #fff;
+	.logo{
+		float: left;
+		padding-top: 1.5%;
+	}
+	.header-nav{
+		float: right;
+		padding-top: 2.5%;
+		li{
+			display: inline-block;
+			margin-left: 28px;
+			a{
+				font-size: 16px;
+				&:hover{
+					color: $generalOrange;
+				}
+			}
+		}
+	}
+}
+.main{
+	.inner-block{
+		color: #fff;
+		h1{
+			font-size: 72px;
+			font-weight: bold;
+		}
+		span{
+			font-size: 28px;
+			font-weight: lighter;
+			display: inline-block;
+			margin-top: 28px;
+			padding-bottom: 42px;
+		}
+	}
+}
