@@ -12,12 +12,12 @@ return gulp.src('dist/scss/**/*.scss')
 });
 
 gulp.task('sprite', function () {
-var spriteData = gulp.src('dist/img/sprite/*.png').pi
-pe(spritesmith({
-imgName: 'sprite.png',
-cssName: '_sprite.scss',
-imgPath: '../img/sprite.png',
-}));
+var spriteData = gulp.src('dist/img/sprite/*.png').pipe(spritesmith({
+		imgName: 'sprite.png',
+		cssName: '_sprite.scss',
+		imgPath: '../img/sprite.png',
+		padding: 2,
+	}));
 
 var imgStream = spriteData.img
 .pipe(gulp.dest('app/img/'));
@@ -28,6 +28,7 @@ var cssStream = spriteData.css
 return merge(imgStream, cssStream);
 });
 
-gulp.task('watch', ['sass'], function(){
+gulp.task('watch', ['sass','sprite'], function(){
 gulp.watch('dist/scss/**/*.scss', ['sass']);
+gulp.watch('dist/img/sprite/*.png', ['sprite']);
 })
